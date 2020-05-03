@@ -29,8 +29,8 @@ stages:
         Contents: |
           **/*.yaml
           **/*.tf
-        TargetFolder: '$(Build.ArtifactStaging)'
-    - bash: ls -R $(Build.ArtifactStaging)
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - bash: ls -R $(Build.ArtifactStagingDirectory)
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
